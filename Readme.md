@@ -27,7 +27,7 @@ The actual patient data is not attached to this source code for the protection o
 Instead, it generates sample data that experts have verified to be valid.
 
 Download an original data for sample data generation.
-On execution of this program. A sample data will be generated from './data/simulated_dpc_data.csv'.
+On execution of this program. A sample data will be generated from './simulated_dpc_data.csv'.
 
 # Note
 
