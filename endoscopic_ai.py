@@ -9,7 +9,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 
 # Read data
-image_file_path = './data/simulated_dpc_data.csv'
+image_file_path = './simulated_dpc_data.csv'
 with codecs.open(image_file_path, "r", "Shift-JIS", "ignore") as file:
     dpc = pd.read_table(file, delimiter=",")
 
@@ -30,7 +30,7 @@ total_patient_features.reset_index()
 # Load a new file with ID and treatment availability
 
 # Prepare training data
-image_file_path_ID_and_polyp_pn = './data/simulated_patient_data.csv'
+image_file_path_ID_and_polyp_pn = './simulated_patient_data.csv'
 with codecs.open(image_file_path_ID_and_polyp_pn, "r", "Shift-JIS", "ignore") as file:
     ID_and_polyp_pn = pd.read_table(file, delimiter=",")
 ID_and_polyp_pn_data= ID_and_polyp_pn[['ID', 'target']]
