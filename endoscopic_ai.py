@@ -119,7 +119,7 @@ def reg_top10_lightGBM(merge_data,outname,no,random_state_number):
     r2 = r2_score(y_test,y_pred)
     df_Df = pd.DataFrame({'regression_y_test_'+no:y_test,'regression_y_pred_'+no:y_pred,'RMSE_'+no:rmse,'R2_'+no:r2})
     df_Df.to_csv(r""+"./"+outname+no+'.csv', encoding = 'shift-jis')
-    importance = pd.DataFrame(model.feature_importance(), columns=['importance'])
+    importance = pd.DataFrame(model.feature_importance(importance_type='gain'), columns=['importance'])
     column_list=merge_data.drop(["target"], axis=1)
     importance["columns"] =list(column_list.columns)
     return importance
